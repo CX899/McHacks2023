@@ -1,5 +1,4 @@
-import * as React from 'react';
-import Avatar from '@mui/material/Avatar';
+import { useState } from 'react';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
@@ -7,11 +6,13 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
-import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
-import Container from '@mui/material/Container';
 import { Link } from 'react-router-dom';
 import Logo from '../assets/logo.svg'
+import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { auth } from '../firebase';
+import { useNavigate } from 'react-router-dom';
+import Container from '@mui/material/Container';
 
 function Copyright(props) {
   return (
@@ -24,14 +25,29 @@ function Copyright(props) {
 
 
 const SignUp = () => {
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    });
-  };
+  const [error, setError] = useState(false);
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const navigate = useNavigate();
+
+
+  const handleSubmit = (e) => {
+      e.preventDefault();
+
+      createUserWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+          // Signed in 
+          const user = userCredential.user;
+          navigate('/');
+          console.log("success");
+      })
+      .catch((error) => {
+          setError(true);
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          console.log(errorCode, errorMessage);
+      });
+};
 
   return (
       <Container component="main" maxWidth="xs">
@@ -62,6 +78,7 @@ const SignUp = () => {
                   label="Email Address"
                   name="email"
                   autoComplete="email"
+                  onChange={(e) => {setEmail(e.target.value)}}
                 />
               </Grid>
               <Grid item xs={12}>
@@ -73,6 +90,7 @@ const SignUp = () => {
                   type="password"
                   id="password"
                   autoComplete="new-password"
+                  onChange={(e) => {setPassword(e.target.value)}}
                 />
               </Grid>
             </Grid>
