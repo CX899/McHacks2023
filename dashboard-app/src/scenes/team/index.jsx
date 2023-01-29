@@ -7,8 +7,23 @@ import Header from '../../components/Header'
 import { mockDataTeam } from '../../data/mockData'
 import Navbar from '../global/navbar'
 import Leftbar from '../global/leftbar'
+import { useEffect, useState } from 'react';    
+import { collection, getDocs, doc } from 'firebase/firestore';
+import { db } from '../../firebase'
 
 const Team = () => {
+    const [rows, setRows] = useState([])
+    const empCollectionref = collection(db, 'users');
+
+    useEffect(() => {
+        getEmployees()
+    }, [])
+    
+    const getEmployees = async () => {
+        const data = await getDocs(empCollectionref);
+        setRows(data.docs.map(doc => ({id: doc.id, ...doc.data()}))
+        )
+    }
     const columns = [
         { field: 'id', headerName: 'ID' }, 
         { field: 'name', headerName: 'Name', color:"black", flex: 1, cellClassName: 'name-column--cell'},
@@ -81,7 +96,7 @@ const Team = () => {
             },
         }}>
             <DataGrid
-                rows={mockDataTeam}
+                rows={rows}
                 columns={columns}
             />
         </Box>

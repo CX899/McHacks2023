@@ -1,10 +1,12 @@
 import Header from '../../components/Header'
-import {Box, InputLabel, Typography} from '@mui/material'
+import {Box, FormControl, InputLabel, Typography} from '@mui/material'
 import Navbar from '../global/navbar'
 import Leftbar from '../global/leftbar'
 import { CardContent, Card, Grid, TextField, Button, MenuItem, Select} from '@mui/material';
 import { useState } from 'react';
 import HighlightOffRoundedIcon from '@mui/icons-material/HighlightOffRounded';
+import { flexbox } from '@mui/system';
+import { Rowing } from '@mui/icons-material';
 
 const Task = () => {
   const [newTask, setNewTask] = useState({ title: '', description: '' , status: ''});
@@ -33,8 +35,8 @@ const Task = () => {
     <Box m="60px">
         <Header title="Tasks" subtitle="Track the TO-DO's"/>
     </Box>
-    <Box p="40px" marginLeft="40px" marginBottom="40px" backgroundColor="white" width="700px" height="50px" borderRadius="10px" boxShadow="1" >
-    <form onSubmit={handleSubmit} sx={{minWidth:120}}>
+    <Box p="40px" marginLeft="40px" marginBottom="40px" backgroundColor="white" width="700px" height="50px" borderRadius="10px" boxShadow="1" marginLeft="400px">
+    <FormControl fullWidth onSubmit={handleSubmit} sx={{width: "700px", display: "flex", flexDirection: "row"}}>
       <TextField
         label="Title"
         name="title"
@@ -50,11 +52,11 @@ const Task = () => {
       />
        <Select
           value={newTask.status}
-          label="Status"
           name="status"
+          label="Status"
           onChange={handleInputChange}
-          padding="10px"
-          minWidth="120px"
+          
+          height="25px"
         >
           <MenuItem value="">
             <em>None</em>
@@ -64,7 +66,7 @@ const Task = () => {
           <MenuItem value="Completed">Completed</MenuItem>
         </Select>
       <Button type="submit">Add Task</Button>
-    </form>
+    </FormControl>
     </Box>
     <Box display="flex">
     <Grid container spacing={2}>

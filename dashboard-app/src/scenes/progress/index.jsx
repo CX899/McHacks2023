@@ -1,5 +1,5 @@
 import Header from '../../components/Header'
-import {Box, Typography, Button, TextField, Select} from '@mui/material'
+import {Box, Typography, Button, TextField, Select, MenuItem, FormControl, InputLabel} from '@mui/material'
 import Navbar from '../global/navbar'
 import Leftbar from '../global/leftbar'
 import {doc, setDoc} from 'firebase/firestore'
@@ -14,6 +14,7 @@ const Progress = () => {
   const [phone, setPhone] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+  const [access, setAccess] = useState('')
 
   const handleAdd = async(e) => {
     e.preventDefault()
@@ -25,7 +26,8 @@ const Progress = () => {
       age: age,
       phone: phone,
       email: email,
-      password: password
+      password: password,
+      access: access
     });
 
   } catch (e) {
@@ -43,7 +45,7 @@ const Progress = () => {
         <Header title="Create User" subtitle="Add teammates"/>
     </Box>
     <Typography variant="h4" sx={{paddingLeft: 20}}>Create user form</Typography>
-    <Box m="60px" backgroundColor="white" width="500px" paddingTop="40px">
+    <Box m="60px" backgroundColor="white" width="500px" paddingTop="40px" sx={{border: 3, borderColor: 'red', borderRadius: '10px'}}>
       <form onSubmit={handleAdd}>
       <Box m="20px" display="flex" flexDirection="row">
       <TextField
@@ -81,12 +83,22 @@ const Progress = () => {
         name="password"
         variant="standard"
         required
-        fullWidth
         type="password"
         id="password"
         autoComplete="current-password"
         onChange={(e) => setPassword(e.target.value)}
       />
+      <FormControl fullWidth variant="filled" sx={{width: "190px", paddingLeft: "70px"}}>
+       <Select
+          label="Status"
+          name="status"
+          onChange={(e) => setAccess(e.target.value)}
+        >
+          <MenuItem value="admin">admin</MenuItem>
+          <MenuItem value="user">user</MenuItem>
+          <MenuItem value="manager">manager</MenuItem>
+        </Select>
+      </FormControl>
       </Box>
     </form>
         <Button onClick={handleAdd} sx={{paddingBottom: 10, paddingLeft: 3,}}>Add</Button>

@@ -61,8 +61,6 @@ const Leftbar = () => {
             <Item title="Tasks" to="/task"icon={<TaskAltOutlinedIcon />}/>
             <Item title="Calendar" to="/calendar"icon={<CalendarMonthOutlinedIcon />}/>
             <Item title="User Form" to="/progress"icon={<AccessibilityNewIcon />}/>
-            <Typography variant="h6" sx={{ m: "22px 0 5px 20px" }}>Team Admin</Typography>
-            <Item title="Team management" to="/"icon={<AdminPanelSettingsOutlinedIcon  />}/>
             <Typography variant="h6" sx={{ m: "22px 0 5px 20px" }}>User</Typography>
             <Item title="Logout" to="/login"icon={<LogoutIcon/>}/>
           </Box>
