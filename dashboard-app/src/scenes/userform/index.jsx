@@ -45,8 +45,8 @@ const Progress = () => {
         <Header title="Create User" subtitle="Add teammates"/>
     </Box>
     <Box display="flex" flexDirection="column" alignItems="center">
-    <Typography variant="h4" boxShadow={1} sx={{backgroundColor:"white", marginBottom: "10px", padding:"20px", borderRadius: "20px"}}>CREATE USER FORM</Typography>
-    <Box backgroundColor="white" width="500px" paddingTop="40px" boxShadow={1} sx={{border: 3, borderColor: 'red', borderRadius: '10px'}}>
+    <Typography variant="h5" boxShadow={1} fontFamily="roboto" fontWeight="bold" sx={{backgroundColor:"white", marginBottom: "10px", padding:"20px", borderRadius: "20px", }}>CREATE USER FORM</Typography>
+    <Box backgroundColor="white" width="500px" paddingTop="100px" boxShadow={3} sx={{borderRadius: '10px'}}>
       <form onSubmit={handleAdd}>
       <Box m="20px" display="flex" flexDirection="row">
       <TextField
@@ -102,7 +102,7 @@ const Progress = () => {
       </FormControl>
       </Box>
     </form>
-        <Button onClick={handleAdd} sx={{paddingBottom: 10, paddingLeft: 3,}}>Add</Button>
+        <Button onClick={handleAdd} sx={{marginBottom: 10, marginLeft: 3,}}>Add</Button>
     </Box>
     </Box>
     </div>

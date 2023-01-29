@@ -3,7 +3,6 @@ import { Typography } from "@mui/material"
 import { Box } from "@mui/system"
 import { ProSidebar, Menu, MenuItem } from "react-pro-sidebar";
 import "react-pro-sidebar/dist/css/styles.css";
-import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import CalendarMonthOutlinedIcon from '@mui/icons-material/CalendarMonthOutlined';
 import TaskAltOutlinedIcon from '@mui/icons-material/TaskAltOutlined';
 import GroupsOutlinedIcon from '@mui/icons-material/GroupsOutlined';
