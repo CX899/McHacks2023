@@ -10,7 +10,7 @@ const Banner = () => {
 
     const [loopNumber, setLoopNumber] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
-    const toRotate = ['Automate', 'Speed Up', 'Facilitate'];
+    const toRotate = ['Automate', 'Speed Up', 'Facilitate', 'Streamline'];
     const [text, setText] = useState('');
     const period = 2000;
     const [delta, setDelta] = useState(300 - Math.random() * 100);
@@ -48,7 +48,7 @@ const Banner = () => {
         <Box m="190px">
                     <span className="tagline">Welcome to RedBirdRoster</span>
                     <h1><span className="background__span">{`Red/Bird/Roster`}</span>{` allows you to`} <span className='wrap'><br/>{text}</span></h1>
-                    <p>This project is all about team work, we wanted to design a web-app to increase workflow. We all know it can be hard to track the progress of projects. Using RedBirdRoster, we guarantee you an easier experience on team projects.</p>
+                    <p>RedBirdsRoster streamlines task management with a user-friendly design and pleasant interface. Say goodbye to cluttered to-do lists, confusing event planning, and accessible team management and hello to an intuitive platform that prioritizes ease of use and efficiency. Enhance your team's productivity and get more done in less time with our innovative solution.</p>
                     <Link to="/login">Start here<ArrowRightCircle size={25}/></Link>
                 </Box>
                 <Box className="banner">
