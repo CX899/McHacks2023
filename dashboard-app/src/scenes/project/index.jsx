@@ -11,6 +11,9 @@ const Project = () => {
     <Navbar/>
     <Box m="60px">
         <Header title="Project" subtitle="Managing projects"/>
+        <Box display="flex" justifyContent="space-between" alignItems="center">
+          <h1>No project started</h1>
+        </Box>
     </Box>
     </div>
     </div>

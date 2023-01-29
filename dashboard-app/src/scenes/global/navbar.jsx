@@ -26,7 +26,7 @@ const Navbar = () => {
         display="flex"
         borderRadius="3px"
       >
-      <Box backgroundColor="white" alignContent="center" alignItems="center" borderRadius="15px" m="10px" p="20px" border={3} borderColor="red">{user ? <Typography variant="h8" fontFamily="roboto" fontWeight="bold" color="grey"> Hello, <span className="background__span">{user.email}</span> we hope you're having a good day!</Typography> : <Typography>Please sign in</Typography>}
+      <Box backgroundColor="white" alignContent="center" alignItems="center" borderRadius="15px" m="10px" p="20px" border={1} borderColor="red">{user ? <Typography variant="h8" fontFamily="roboto" fontWeight="bold" color="grey"> Hello, <span className="background__span">{user.email}</span>, Welcome Back!</Typography> : <Typography>Please sign in</Typography>}
       </Box>
       </Box>
 

@@ -8,12 +8,14 @@ import Task from './scenes/taskboard';
 import Calendar from './scenes/calendar';
 import Login from './components/Login';
 import SignUp from './components/Signup';
+import Banner from './scenes/Banner';
 
 function App() {
   return (
     <div className="app">
      <main className='content'>
       <Routes>
+        <Route exact path='/banner' element={<Banner/>}/>
         <Route exact path='/login' element={<Login/>}/>
         <Route exact path='/signup' element={<SignUp/>}/>
         <Route exact path='/' element={<Dashboard/>}/>
@@ -21,7 +23,7 @@ function App() {
         <Route path='/team' element={<Team/>}/>
         <Route path='/userform' element={<Userform/>}/>
         <Route path='/task' element={<Task/>}/>
-        <Route path='/calendar' element={<Calendar/>}/>
+        <Route path='/calendar' element={<Calendar/>}/> 
       </Routes>
      </main>
     </div>

@@ -58,7 +58,7 @@ const Leftbar = () => {
             <Item title="Calendar" to="/calendar"icon={<CalendarMonthOutlinedIcon />}/>
             <Item title="User Form" to="/userform"icon={<AccessibilityNewIcon />}/>
             <Typography variant="h6" sx={{ m: "22px 0 5px 20px" }}>User</Typography>
-            <Item title="Logout" to="/login"icon={<LogoutIcon/>}/>
+            <Item title="Logout" to="/banner"icon={<LogoutIcon/>}/>
           </Box>
           </Menu>
           </ProSidebar>
