@@ -49,8 +49,6 @@ const Leftbar = () => {
             </Box>
           </Box>
           <Box paddingLeft="10%" paddingBottom="10%">
-            <Typography variant="h6" sx={{ m: "20px 0 5px 20px" }}>Team Dashboard</Typography>
-            <Item title="Dashboard" to="/dashboard"icon={<HomeOutlinedIcon />}/>
             <Typography variant="h6" sx={{ m: "20px 0 5px 20px" }}>Team Environment</Typography>
             <Item title="Project" to="/project"icon={<AccountTreeOutlinedIcon />}/>
             <Item title="Team" to="/team"icon={<GroupsOutlinedIcon />}/>
