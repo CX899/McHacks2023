@@ -3,7 +3,7 @@ import Team from './scenes/team/';
 import Project from './scenes/project/';
 import {Routes, Route} from 'react-router-dom';
 import Dashboard from './scenes/dashboard';
-import Progress from './scenes/progress';
+import Userform from './scenes/userform';
 import Task from './scenes/taskboard';
 import Calendar from './scenes/calendar';
 import Login from './components/Login';
@@ -19,7 +19,7 @@ function App() {
         <Route exact path='/' element={<Dashboard/>}/>
         <Route exact path='/project' element={<Project/>}/>
         <Route path='/team' element={<Team/>}/>
-        <Route path='/progress' element={<Progress/>}/>
+        <Route path='/userform' element={<Userform/>}/>
         <Route path='/task' element={<Task/>}/>
         <Route path='/calendar' element={<Calendar/>}/>
       </Routes>

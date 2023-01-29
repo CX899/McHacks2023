@@ -4,11 +4,10 @@ import AdminPanelSettingsOutlined from '@mui/icons-material/AdminPanelSettingsOu
 import LockOpenOutlinedIcon from '@mui/icons-material/LockOpenOutlined';
 import SecurityOutlinedIcon from '@mui/icons-material/SecurityOutlined';
 import Header from '../../components/Header'
-import { mockDataTeam } from '../../data/mockData'
 import Navbar from '../global/navbar'
 import Leftbar from '../global/leftbar'
 import { useEffect, useState } from 'react';    
-import { collection, getDocs, doc } from 'firebase/firestore';
+import { collection, getDocs } from 'firebase/firestore';
 import { db } from '../../firebase'
 
 const Team = () => {

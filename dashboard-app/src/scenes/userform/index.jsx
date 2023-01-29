@@ -1,5 +1,5 @@
 import Header from '../../components/Header'
-import {Box, Typography, Button, TextField, Select, MenuItem, FormControl, InputLabel} from '@mui/material'
+import {Box, Typography, Button, TextField, Select, MenuItem, FormControl} from '@mui/material'
 import Navbar from '../global/navbar'
 import Leftbar from '../global/leftbar'
 import {doc, setDoc} from 'firebase/firestore'
@@ -44,7 +44,8 @@ const Progress = () => {
     <Box m="60px">
         <Header title="Create User" subtitle="Add teammates"/>
     </Box>
-    <Typography variant="h4" sx={{paddingLeft: 20}}>Create user form</Typography>
+    <Box display="flex" flexDirection="column" alignItems="center">
+    <Typography variant="h4">Create user form</Typography>
     <Box m="60px" backgroundColor="white" width="500px" paddingTop="40px" sx={{border: 3, borderColor: 'red', borderRadius: '10px'}}>
       <form onSubmit={handleAdd}>
       <Box m="20px" display="flex" flexDirection="row">
@@ -102,6 +103,7 @@ const Progress = () => {
       </Box>
     </form>
         <Button onClick={handleAdd} sx={{paddingBottom: 10, paddingLeft: 3,}}>Add</Button>
+    </Box>
     </Box>
     </div>
     </div>

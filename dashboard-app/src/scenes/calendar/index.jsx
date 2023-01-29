@@ -1,5 +1,5 @@
 import Header from '../../components/Header'
-import {Box, Typography} from '@mui/material'
+import {Box} from '@mui/material'
 import Navbar from '../global/navbar'
 import Leftbar from '../global/leftbar'
 import FullCalendar from '@fullcalendar/react' 

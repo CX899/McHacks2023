@@ -8,7 +8,6 @@ import CalendarMonthOutlinedIcon from '@mui/icons-material/CalendarMonthOutlined
 import TaskAltOutlinedIcon from '@mui/icons-material/TaskAltOutlined';
 import GroupsOutlinedIcon from '@mui/icons-material/GroupsOutlined';
 import AccountTreeOutlinedIcon from '@mui/icons-material/AccountTreeOutlined';
-import AdminPanelSettingsOutlinedIcon from '@mui/icons-material/AdminPanelSettingsOutlined';
 import LogoutIcon from '@mui/icons-material/Logout';
 import AccessibilityNewIcon from '@mui/icons-material/AccessibilityNew';
 import Logo from '../../assets/Red-Bird.png'
@@ -38,9 +37,6 @@ const Leftbar = () => {
       <ProSidebar>
         <Menu iconShape="square">
           <Box mb="25px">
-            <Box>
-              <img ml="20px"/>
-            </Box>
             <Box textAlign="center">
             <Box
              display="flex"
@@ -60,7 +56,7 @@ const Leftbar = () => {
             <Item title="Team" to="/team"icon={<GroupsOutlinedIcon />}/>
             <Item title="Tasks" to="/task"icon={<TaskAltOutlinedIcon />}/>
             <Item title="Calendar" to="/calendar"icon={<CalendarMonthOutlinedIcon />}/>
-            <Item title="User Form" to="/progress"icon={<AccessibilityNewIcon />}/>
+            <Item title="User Form" to="/userform"icon={<AccessibilityNewIcon />}/>
             <Typography variant="h6" sx={{ m: "22px 0 5px 20px" }}>User</Typography>
             <Item title="Logout" to="/login"icon={<LogoutIcon/>}/>
           </Box>

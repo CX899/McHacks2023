@@ -1,10 +1,8 @@
-import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
-import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { signInWithEmailAndPassword } from 'firebase/auth';
@@ -26,15 +24,20 @@ function Copyright(props) {
 
 const Login = () => {
 
+
+    // State
     const [error, setError] = useState(false);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
 
 
+    // Sign in method
     const handleLogin = (e) => {
         e.preventDefault();
 
+
+        // Firebase method
         signInWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
             // Signed in 
