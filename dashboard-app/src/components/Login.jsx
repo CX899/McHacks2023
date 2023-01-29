@@ -42,7 +42,7 @@ const Login = () => {
         .then((userCredential) => {
             // Signed in 
             const user = userCredential.user;
-            navigate('/');
+            navigate('/team');
             console.log("success");
         })
         .catch((error) => {
