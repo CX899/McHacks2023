@@ -3,6 +3,7 @@ import {Box, Typography} from '@mui/material'
 import Navbar from '../global/navbar'
 import Leftbar from '../global/leftbar'
 import FullCalendar from '@fullcalendar/react' 
+import interactionPlugin from '@fullcalendar/interaction'; 
 import dayGridPlugin from '@fullcalendar/daygrid' 
 import Modal from '../Modal/index.js';
 import { useRef, useState } from 'react';
@@ -65,8 +66,10 @@ const Calendar = () => {
             }
           },
         }}
-        plugins={[ dayGridPlugin ]}
+        plugins={[ dayGridPlugin, interactionPlugin ]}
         height="auto"
+        editable={true}
+        dayMaxEvents={true}
         />
         {modalOpen && <Modal modalOpen={modalOpen} handleClose={close} sendValues={receivedValues}/>}
     </Box>

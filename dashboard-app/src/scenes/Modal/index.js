@@ -48,20 +48,27 @@ const Modal = ({handleClose, sendValues}) => {
             animate='visible'
             exit='visible'
             >
-              <form onSubmit={setValues}>
+              <form onSubmit={setValues} sx={{display:"flex"}}>
                   <TextField
                     label="Title"
                     value={input1}
+                    variant="standard"
                     onChange={(e) => setInput1(e.target.value)}
+                    sx={{margin: "5%", justifyContent:"space-between", "& fieldset": { border: 'none' }}}
                   />
 
                   <TextField
                     label="Enter a date in YYYY-MM-DD format"
                     value={input2}
+                    variant="standard"
                     onChange={(e) => setInput2(e.target.value)}
+                    sx={{margin: "5%",justifyContent:"space-between", "& fieldset": { border: 'none' }}}
                   />
                   
-                  <Button type="submit"  onClick={handleClose}>Add Event</Button>
+                  <Button type="submit"  onClick={handleClose} 
+                  sx={{margin: "5%",justifyContent:"space-between", backgroundColor:"white"}}>
+                    Add Event
+                  </Button>
                 </form>
             </motion.div>
         </Backdrop>
