@@ -11,7 +11,7 @@ import GroupsOutlinedIcon from '@mui/icons-material/GroupsOutlined';
 import AccountTreeOutlinedIcon from '@mui/icons-material/AccountTreeOutlined';
 import AdminPanelSettingsOutlinedIcon from '@mui/icons-material/AdminPanelSettingsOutlined';
 import LogoutIcon from '@mui/icons-material/Logout';
-import Logo from '../../assets/logo.svg'
+import Logo from '../../assets/Red-Bird.png'
 
 const Item = ({ title, to, icon,}) => {
   return (
@@ -39,16 +39,16 @@ const Leftbar = () => {
         <Menu iconShape="square">
           <Box mb="25px">
             <Box>
-              <img ml="15px"/>
+              <img ml="20px"/>
             </Box>
             <Box textAlign="center">
             <Box
              display="flex"
-             paddingLeft="25px"
-             paddingRight="20px"
+             paddingLeft="40px"
+             paddingRight="40px"
              justifyContent="space-between">
               <img src={Logo} alt="logo" width="30px" height="30px" />
-               <Typography variant="h5" >ReactDashboards</Typography>
+               <Typography variant="h5" >RedBirdRoster</Typography>
             </Box>
             </Box>
           </Box>
