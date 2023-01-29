@@ -4,13 +4,13 @@ import { Box } from "@mui/system"
 import { ProSidebar, Menu, MenuItem } from "react-pro-sidebar";
 import "react-pro-sidebar/dist/css/styles.css";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
-import TimelineOutlinedIcon from '@mui/icons-material/TimelineOutlined';
 import CalendarMonthOutlinedIcon from '@mui/icons-material/CalendarMonthOutlined';
 import TaskAltOutlinedIcon from '@mui/icons-material/TaskAltOutlined';
 import GroupsOutlinedIcon from '@mui/icons-material/GroupsOutlined';
 import AccountTreeOutlinedIcon from '@mui/icons-material/AccountTreeOutlined';
 import AdminPanelSettingsOutlinedIcon from '@mui/icons-material/AdminPanelSettingsOutlined';
 import LogoutIcon from '@mui/icons-material/Logout';
+import AccessibilityNewIcon from '@mui/icons-material/AccessibilityNew';
 import Logo from '../../assets/Red-Bird.png'
 
 const Item = ({ title, to, icon,}) => {
@@ -29,7 +29,7 @@ const Leftbar = () => {
         padding: "5px 35px 5px 20px",
       },
       "& .pro-inner-item:hover": {
-        color: "#3751FF !important",
+        color: "red !important",
       },
       "& .pro-sidebar .pro-sidebar-inner": {
         background: "#363740",
@@ -60,7 +60,7 @@ const Leftbar = () => {
             <Item title="Team" to="/team"icon={<GroupsOutlinedIcon />}/>
             <Item title="Tasks" to="/task"icon={<TaskAltOutlinedIcon />}/>
             <Item title="Calendar" to="/calendar"icon={<CalendarMonthOutlinedIcon />}/>
-            <Item title="Progress" to="/progress"icon={<TimelineOutlinedIcon />}/>
+            <Item title="User Form" to="/progress"icon={<AccessibilityNewIcon />}/>
             <Typography variant="h6" sx={{ m: "22px 0 5px 20px" }}>Team Admin</Typography>
             <Item title="Team management" to="/"icon={<AdminPanelSettingsOutlinedIcon  />}/>
             <Typography variant="h6" sx={{ m: "22px 0 5px 20px" }}>User</Typography>
