@@ -11,7 +11,7 @@ import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../firebase';
 import { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import Logo from '../assets/logo.svg'
+import Logo from '../assets/Red-Bird.png'
 
 
 function Copyright(props) {

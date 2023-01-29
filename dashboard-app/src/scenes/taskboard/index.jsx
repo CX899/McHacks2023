@@ -1,11 +1,10 @@
 import Header from '../../components/Header'
-import {Box, Typography} from '@mui/material'
+import {Box, InputLabel, Typography} from '@mui/material'
 import Navbar from '../global/navbar'
 import Leftbar from '../global/leftbar'
-import { CardContent, Card, Grid, TextField, Button } from '@mui/material';
+import { CardContent, Card, Grid, TextField, Button, MenuItem, Select} from '@mui/material';
 import { useState } from 'react';
-  
-
+import HighlightOffRoundedIcon from '@mui/icons-material/HighlightOffRounded';
 
 const Task = () => {
   const [newTask, setNewTask] = useState({ title: '', description: '' , status: ''});
@@ -21,8 +20,8 @@ const Task = () => {
   };
 
   const [tasks, setTasks] = useState([
-    { id: 1, title: 'Task 1', description: 'Description for task 1', status: 'done' },
-    { id: 2, title: 'Task 2', description: 'Description for task 2', status: 'done' },
+    { id: 1, title: 'Push to Main-Branch', description: 'Description for task 1', status: 'Completed' },
+    { id: 2, title: 'Task 2', description: 'Description for task 2', status: 'Completed' },
   ]);
 
 
@@ -34,8 +33,8 @@ const Task = () => {
     <Box m="60px">
         <Header title="Tasks" subtitle="Track the TO-DO's"/>
     </Box>
-    <Box>
-    <form onSubmit={handleSubmit}>
+    <Box p="40px" marginLeft="40px" marginBottom="40px" backgroundColor="white" width="700px" height="50px" borderRadius="10px" boxShadow="1" >
+    <form onSubmit={handleSubmit} sx={{minWidth:120}}>
       <TextField
         label="Title"
         name="title"
@@ -47,29 +46,53 @@ const Task = () => {
         name="description"
         value={newTask.description}
         onChange={handleInputChange}
+        padding="10px"
       />
-        <TextField
-        label="Status"
-        name="status"
-        value={newTask.status}
-        onChange={handleInputChange}
-      />
+       <Select
+          value={newTask.status}
+          label="Status"
+          name="status"
+          onChange={handleInputChange}
+          padding="10px"
+          minWidth="120px"
+        >
+          <MenuItem value="">
+            <em>None</em>
+          </MenuItem>
+          <MenuItem value="To-do">To-Do</MenuItem>
+          <MenuItem value="In Progress">In Progress</MenuItem>
+          <MenuItem value="Completed">Completed</MenuItem>
+        </Select>
       <Button type="submit">Add Task</Button>
     </form>
-
     </Box>
-    <Box display="flex" flexDirection="column">
-    <Grid container spacing={2} direction="column" >
+    <Box display="flex">
+    <Grid container spacing={2}>
       {tasks.map(task => (
-    <Grid item xs={12} sm={4} key={task.id} margin="0 40px 0 40px" width="300px">
+    <Grid item xs={12} sm={3} key={task.id} margin="0 40px 0 40px" width="300px">
       <Card>
         <CardContent>
+        <HighlightOffRoundedIcon onClick={() => setTasks(tasks.filter((t) => t.id !== task.id))}/>
           <Typography color="textSecondary" gutterBottom>
             {task.title}
           </Typography>
           <Typography variant="body2" component="p">
-            {task.description} {task.status}
-          </Typography>
+            {task.description}
+            </Typography>
+            <Typography 
+                    width="60%" 
+                    m="2px" 
+                    display="flex" 
+                    backgroundColor={
+                    task.status === 'Completed' ? '#92f7a3' 
+                    : task.status === 'In Progress' ? '#f7ef92'
+                    : '#bccff7'
+                    }
+                    borderRadius="15px"
+                    padding="5px"
+                    alignItems="center"
+                    justifyContent="center"
+                    >{task.status}</Typography> 
         </CardContent>
       </Card>
     </Grid>
