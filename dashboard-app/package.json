@@ -3,12 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@bryntum/taskboard": "npm:@bryntum/taskboard-trial@^5.2.8",
-    "@bryntum/taskboard-react": "^5.2.8",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
     "@fullcalendar/core": "^6.0.3",
     "@fullcalendar/daygrid": "^6.0.3",
+    "@fullcalendar/interaction": "^6.0.3",
     "@fullcalendar/react": "^6.0.4",
     "@mui/icons-material": "^5.11.0",
     "@mui/material": "^5.11.5",
