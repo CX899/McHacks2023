@@ -63,14 +63,14 @@ body,
 }
 
 .modal {
-  width: clamp(35%, 90%, 50%);
-  height: min(40%);
-  border-radius: 40px;
+  width: 35%;
+  height: 25%;
+  border-radius: 20px;
   margin-top: 50px;
   position: absolute;
   flex-direction: column;
   align-items: center;
-  background-color: #363740;
+  background-color: #cee0cb;
   margin-left: 18.5%;
   color: gray;
 }
