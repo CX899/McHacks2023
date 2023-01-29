@@ -47,7 +47,7 @@ const Banner = () => {
     <Box className="banner" display="flex" flexDirection="row" backgroundColor="white">
         <Box m="190px">
                     <span className="tagline">Welcome to RedBirdRoster</span>
-                    <h1><span className="background__span">{`Red/Bird/  Roster`}</span>{` allows you to`} <span className='wrap'><br/>{text}</span></h1>
+                    <h1><span className="background__span">{`Red/Bird/Roster`}</span>{` allows you to`} <span className='wrap'><br/>{text}</span></h1>
                     <p>This project is all about team work, we wanted to design a web-app to increase workflow. We all know it can be hard to track the progress of projects. Using RedBirdRoster, we guarantee you an easier experience on team projects.</p>
                     <Link to="/login">Start here<ArrowRightCircle size={25}/></Link>
                 </Box>

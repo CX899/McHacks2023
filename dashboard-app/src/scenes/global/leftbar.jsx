@@ -50,7 +50,7 @@ const Leftbar = () => {
           </Box>
           <Box paddingLeft="10%" paddingBottom="10%">
             <Typography variant="h6" sx={{ m: "20px 0 5px 20px" }}>Team Dashboard</Typography>
-            <Item title="Dashboard" to="/"icon={<HomeOutlinedIcon />}/>
+            <Item title="Dashboard" to="/dashboard"icon={<HomeOutlinedIcon />}/>
             <Typography variant="h6" sx={{ m: "20px 0 5px 20px" }}>Team Environment</Typography>
             <Item title="Project" to="/project"icon={<AccountTreeOutlinedIcon />}/>
             <Item title="Team" to="/team"icon={<GroupsOutlinedIcon />}/>
@@ -58,7 +58,7 @@ const Leftbar = () => {
             <Item title="Calendar" to="/calendar"icon={<CalendarMonthOutlinedIcon />}/>
             <Item title="User Form" to="/userform"icon={<AccessibilityNewIcon />}/>
             <Typography variant="h6" sx={{ m: "22px 0 5px 20px" }}>User</Typography>
-            <Item title="Logout" to="/banner"icon={<LogoutIcon/>}/>
+            <Item title="Logout" to="/"icon={<LogoutIcon/>}/>
           </Box>
           </Menu>
           </ProSidebar>
