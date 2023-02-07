@@ -22,11 +22,11 @@
 - We are really proud of what we created in our small team of 2, as we lost two members to unfortunate events 😭
 
 #What's next for RedBirdsRoster
-Multiple upgrades could have been done. Unfortunately, in the period that we had, that was, of course, out of our hands. Here is a list of a few features that could come in RedBirdRoster in the future:
-- A section to review analytics, such as the budget for a project
-- More customization (dark and light themes)
-- A dashboard tracking the different tasks, analytics and budgets
-- Assigning different tasks to different users (adding to the analytics)
-- Voice / Video chat tabs
-- A connection from Full Calendar to the Google Calendar to import or export events
-- Ai assistance using OpenAI's API
+- Multiple upgrades could have been done. Unfortunately, in the period that we had, that was, of course, out of our hands. Here is a list of a few features that could come in RedBirdRoster in the future:
+    - A section to review analytics, such as the budget for a project
+    - More customization (dark and light themes)
+    - A dashboard tracking the different tasks, analytics and budgets
+    - Assigning different tasks to different users (adding to the analytics)
+    - Voice / Video chat tabs
+    - A connection from Full Calendar to the Google Calendar to import or export events
+    - Ai assistance using OpenAI's API
