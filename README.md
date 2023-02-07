@@ -1,12 +1,12 @@
 # McHacks2023
 
-Inspiration
+#Inspiration
 - Inspired by the inefficiencies in team communication, we designed a user-friendly dashboard to streamline task management. Our solution eliminates the need for multiple, complex platforms, enabling teams and managers to effectively manage work, tasks, and events with ease.
 
-What it does
+#What it does
 - RedBirdsRoster streamlines task management with a user-friendly design and pleasant interface. ❌ Say goodbye to cluttered to-do lists, confusing event planning, perplexing team management ✅ Hello to an intuitive platform that prioritizes ease of use and efficiency. ✨ Enhance your team's productivity, ease up and speed up your supervision process and get more done in less time with our innovative solution.
 
-How we built it
+#How we built it
 - To build, scale, and deploy our team management tool, we used HTML, CSS, and JavaFirebase We utilized the React.js framework, Node.js as a package manager and Firebase as our database
 - Many libraries, such as Full Calendar, Material UI, Framer Motion, React Boot-Strap, and ProSiderbar, to improve the dashboard UI.
 
